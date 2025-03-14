@@ -1,0 +1,230 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+*{
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans';
+}
+
+body{
+    background: #13f299;
+}
+
+header{
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+}
+
+/*Estilos para la imagen*/
+
+
+.logo{
+    margin: 1%;
+    width: 20% ;
+    letter-spacing: -3px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2.5em;
+}
+
+.logo:hover{
+    color: white;
+    transition: 1.5s;
+}
+
+/*Estilos para la barra de navegacion*/
+
+.naOne{
+    margin: 1%;
+    width: 60% ;
+}
+
+.naOne ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.naOne ul li{
+    margin: 1%;
+    padding: 3px;
+    list-style: none;
+}
+
+.naOne ul li a{
+    text-decoration: none;
+    color: black;
+}
+
+.naOne ul li a:hover{
+    color: white;
+    text-decoration: underline;
+    transition: 1s;
+
+}
+
+
+/*Estilos para boton de perfil*/
+
+.liProf{
+    display: flex;
+    justify-content: center;
+    padding: 5px;
+    margin: 1%;
+    width: 20% ;
+}
+
+.liProf button{
+    font-weight: bold;
+    width: 50%;
+    padding: 13px 5px;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.liProf button:hover{
+    background: #09b28e;
+    color: white;
+}
+
+/*Estilos para la primera parte de texto y botones de registro*/
+
+.textOne{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto 0.1%;
+}
+
+.conText{
+    width: 25%;
+    padding: 5px;
+    margin: 10% 10% 10% 10%;
+
+}
+
+.conText h1{
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 55px;
+    letter-spacing: -3px;
+}
+
+.conText p{
+    padding: 5px;
+    margin: 2% auto 0 ;
+}
+
+.conText button{
+    font-weight: bold;
+    margin: 5% 2% 0 0;
+    padding: 13px 5px;
+    width: 30%;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+}
+
+.conText button:hover{
+    background: #09b28e;
+    color: white;
+}
+
+/*Estilos para la primera segunda parte de texto e imagen*/
+
+.textTwo{
+    display: flex;
+    justify-content: flex-start;
+    flex-direction: row;
+    width: 100%;
+    margin: 0 auto 0;
+    padding: 1%;
+    background: white;
+}
+
+.textTwo h6{
+    color: #09b28e;
+    font-size: 1em;
+}
+
+.butServ{
+    font-weight: bold;
+    margin: 5% 2% 0 0;
+    padding: 13px 5px;
+    width: 40%;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    background: #eacf7b;
+}
+
+.conTextTwo{
+    width: 40%;
+    padding: 15px;
+    margin: 4%;
+    border: 1px solid black;
+}
+
+/*Estilos para la tercera parte*/
+
+.textThree{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 100%;
+    margin: 0 auto 0;
+    padding: 1%;
+    background: white;
+}
+
+.conTextThree h6{
+    color: #09b28e;
+    font-size: 1em;
+}
+
+.conTextThree h1{
+    font-weight: 700;
+    font-size: 3em;
+    line-height: 55px;
+    letter-spacing: -3px;
+}
+
+.conTextThree p{
+    padding: 5px;
+    margin: 1% 25% 0;
+}
+
+/*Estilos para la galeria de productos*/
+
+.galery{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin: 2% 0 4% 0;
+    width: 100%;
+}
+
+.galery div{
+    width: 24%;
+    border: 1px solid black;
+    margin: 1% 2%;
+    padding: 1%;
+}
+
+.galery div img{
+    height: 400px;
+    width: 400px;
+}
+
+.galery div p{
+    font-size: 0.8em;
+}
+
+
+
+
