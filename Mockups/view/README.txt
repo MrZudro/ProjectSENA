@@ -1,0 +1,1 @@
+En esta carpeta han de ir el resto de las vistas que ha de manejar el main de la aplicacion.
