@@ -15,6 +15,9 @@ header{
     display: flex;
     flex-direction: row;
     width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
 }
 
 /*Estilos para la imagen*/
@@ -30,7 +33,7 @@ header{
 }
 
 .logo:hover{
-    color: white;
+    color: #13f299;
     transition: 1.5s;
 }
 
@@ -59,7 +62,7 @@ header{
 }
 
 .naOne ul li a:hover{
-    color: white;
+    color: #13f299;
     text-decoration: underline;
     transition: 1s;
 
@@ -96,8 +99,12 @@ header{
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
+    background:url('../images/img.jpg') no-repeat;
+    background-size:cover ;
+    background-position:center ;
     width: 100%;
     margin: 0 auto 0.1%;
+    padding-top: 10%;
 }
 
 .conText{
