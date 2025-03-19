@@ -15,6 +15,9 @@ header{
     display: flex;
     flex-direction: row;
     width: 100%;
+    position: fixed;
+    z-index: 100;
+    background-color: white;
 }
 
 /*Estilos para la imagen*/
@@ -30,7 +33,7 @@ header{
 }
 
 .logo:hover{
-    color: white;
+    color: #13f299;
     transition: 1.5s;
 }
 
@@ -59,7 +62,7 @@ header{
 }
 
 .naOne ul li a:hover{
-    color: white;
+    color: #13f299;
     text-decoration: underline;
     transition: 1s;
 
@@ -96,8 +99,12 @@ header{
     display: flex;
     justify-content: flex-start;
     flex-direction: row;
+    background:url('../images/img.jpg') no-repeat;
+    background-size:cover ;
+    background-position:center ;
     width: 100%;
     margin: 0 auto 0.1%;
+    padding-top: 10%;
 }
 
 .conText{
@@ -216,15 +223,54 @@ header{
     padding: 1%;
 }
 
-.galery div img{
-    height: 400px;
-    width: 400px;
+#imagenGalery{
+    border: 1px solid black;
+    margin: 1% auto;
+    width: 100%;
+}
+
+#imagenGalery img{
+    max-height: 400px;
+    min-height: 200px;
+    max-width: 400px;
+    min-height: 200px;
 }
 
 .galery div p{
     font-size: 0.8em;
 }
 
+/*Estilos del FOOTER*/
+
+footer {
+    border: 1px solid black;
+    padding: 2%;
+}
+
+footer ul{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    padding: 1%;
+}
+
+footer ul li{
+    margin: 2% 3%;
+    list-style: none;
+
+}
+
+footer ul li a{
+    text-decoration: none;
+    font-weight: bolder;
+    color: black;
+}
+
+footer ul li a:hover{
+    color: white;
+    text-decoration: underline;
+    transition: 1s;
+}
 
 
 
