@@ -1,225 +1,268 @@
-/* RESET BÁSICO */
-* {
+/* Estilos Específicos para "Nuestras Citas" */
+body {
+    background-color: #ffe6e6;
+    color: #333;
     margin: 0;
     padding: 0;
-    box-sizing: border-box;
+    animation: fadeIn 1s ease-out;
+
+
+
 }
 
-/* FUENTES Y COLORES */
-body {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-    line-height: 1.6;
-    background-color: #f4f4f4;
+.back-btn {
+    position: fixed; 
+    top: 20px;
+    left: 20px; 
+    padding: 10px 15px;
+    border-radius: 5px;
+    display: flex;
+    align-items: center; 
+    justify-content: center;
+    transition: background-color 0.3s ease;
+}
+.back-btn span {
+    margin-right: 1300px; 
+}
+/* Estilo inicial para la clase del botón */
+.back-btn img {
+    transition: transform 0.3s ease; /* Agrega una transición suave */
+}
+
+/* Efecto de zoom al pasar el cursor */
+.back-btn img:hover {
+    transform: scale(1.1); /* Incrementa el tamaño al 110% */
+}
+
+
+
+h1 {
     color: #333;
+    margin: 20px 0;
 }
 
-/* NAVEGACIÓN */
-header {
-    background-color: #2c3e50;
-    color: white;
-    padding: 1rem 0;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
-}
-
-nav {
-    width: 90%;
-    margin: auto;
+.flip-card-container {
     display: flex;
-    justify-content: space-between;
-    align-items: center;
     flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
 }
 
-nav h1 {
-    font-size: 1.8rem;
+.flip-card {
+    perspective: 1000px;
+    width: 200px;
+    height: 300px;
 }
 
-nav ul {
-    list-style: none;
-    display: flex;
-    gap: 1rem;
+.flip-card-checkbox {
+    display: none;
 }
 
-nav a {
-    color: white;
-    text-decoration: none;
-    font-weight: bold;
-    transition: color 0.3s;
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 0.8s ease;
 }
 
-nav a:hover {
-    color: #1abc9c;
+.flip-card-checkbox:checked ~ .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
-/* HERO SECTION */
-.hero {
-    background: url('mascotas-banner.jpg') no-repeat center center/cover;
-    height: 60vh;
+.flip-card-front, 
+.flip-card-back {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    backface-visibility: hidden;
     display: flex;
     flex-direction: column;
-    justify-content: center;
     align-items: center;
+    justify-content: center;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.flip-card-front {
+    background: #fff;
+    border: 2px solid #ff6666;
+}
+
+.flip-card-back {
+    background: #fff;
+    transform: rotateY(180deg);
+}
+
+.flip-card-front img, 
+.flip-card-back img {
+    width: 100%;
+    height: 70%;
+    object-fit: cover;
+    border-radius: 10px 10px 0 0;
+}
+
+.flip-card-front h3 {
+    font-size: 16px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.caption {
+    font-size: 20px;
+    color: #fff;
+    background: rgba(0, 0, 0, 0.6);
+    padding: 25%;
+    width: 100%;
     text-align: center;
-    color: white;
-    padding: 2rem;
+    position:absolute;
+    bottom: 0;
+    border-radius: 0 0 10px 10px;
+}
+
+/* Animaciones */
+@keyframes fadeIn {
+    0% { opacity: 0; }
+    100% { opacity: 1; }
+}
+
+
+.dates-content {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.dates-content h1 {
+    margin-top: 20px; /* Ajuste para bajar el nombre de la página */
+    font-size: 3em;
+    margin-bottom: 20px;
+    color: #ff6666;
+}
+
+
+
+/* Estilo para el contenedor de tarjetas */
+.flip-card-container {
+    display: flex; /* Flexbox para centrado horizontal */
+    flex-wrap: wrap; /* Permite que las tarjetas se envuelvan */
+    justify-content: center; /* Centra horizontalmente las tarjetas */
+    gap: 50px; /* Espacio entre tarjetas */
+    padding: 40px;
+}
+
+
+/* Estilo de la tarjeta giratoria */
+.flip-card {
+    background-color: transparent;
+    width: 300px;
+    height: 300px;
+    perspective: 1000px; /* Crea el efecto de perspectiva */
     position: relative;
 }
 
-.hero::after {
-    content: "";
-    background-color: rgba(44, 62, 80, 0.6);
+
+
+/* Input checkbox oculto */
+.flip-card-checkbox {
+    display: none;
+}
+
+
+/* Contenedor interno de la tarjeta */
+.flip-card-inner {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    transition: transform 0.6s;
+    transform-style: preserve-3d;
+    cursor: pointer;
+    display: flex; /* Utiliza flexbox para alinear contenido */
+    justify-content: center;
+    align-items: center;
+}
+
+.flip-card-inner:hover {
+    transform: scale(1.05); /* Aplica un leve zoom del 105% */
+}
+
+/* Frente y parte trasera de la tarjeta */
+.flip-card-front,
+.flip-card-back {
     position: absolute;
-    top: 0; left: 0;
-    width: 100%; height: 100%;
-    z-index: 0;
-}
-
-.hero h2, .hero p {
-    z-index: 1;
-}
-
-.hero h2 {
-    font-size: 2.5rem;
-    margin-bottom: 1rem;
-}
-
-.hero p {
-    font-size: 1.2rem;
-    margin-bottom: 1.5rem;
-}
-
-.btn {
-    background-color: #1abc9c;
+    width: 100%;
+    height: 100%;
+    -webkit-backface-visibility: hidden; /* Safari */
+    backface-visibility: hidden;
+    border-radius: 15px; /* Bordes redondeados */
+    overflow: hidden; /* Oculta el contenido que se sale del borde redondeado */
+    justify-content: center;
+    align-items: center;
+    font-size: 20px;
     color: white;
-    padding: 0.7rem 1.2rem;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
+}
+
+/* Parte frontal de la tarjeta */
+.flip-card-front {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsionarse */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+/* Parte trasera de la tarjeta */
+.flip-card-back {
+    background-color: rgba(255, 199, 199, 0.027); /* Fondo semitransparente para el texto */
+    color: white;
+    transform: rotateY(180deg);
+}
+
+/* Imagen en ambas caras de la tarjeta */
+.flip-card-front img,
+.flip-card-back img {
+    background-image: url(../images/img.jpg);
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /* Ajusta la imagen para cubrir todo el contenedor sin distorsionarse */
+    border-radius: 15px; /* Bordes redondeados */
+}
+
+
+/* Título centrado en la parte frontal */
+.flip-card-front h3 {
+    position: absolute;
+    bottom: 35%; /* Ajusta el espacio desde el borde inferior */
+    width: 100%;
+    color: rgb(0, 0, 0);
+    border-radius: 0 0 15px 15px; /* Bordes redondeados en la parte inferior */
+    font-size: 25px;
     font-weight: bold;
-    z-index: 1;
-    transition: background-color 0.3s;
 }
 
-.btn:hover {
-    background-color: #16a085;
+/* Efecto de rotación de la tarjeta al hacer clic (checkbox checked) */
+.flip-card-checkbox:checked + .flip-card-inner {
+    transform: rotateY(180deg);
 }
 
-.btn-secundario {
-    background-color: #3498db;
-    color: white;
-    padding: 0.5rem 1rem;
-    border-radius: 4px;
-    text-decoration: none;
-    font-size: 0.9rem;
-    transition: background-color 0.3s;
+/* Pie de foto en la parte trasera */
+.flip-card-back p {
+    position: absolute;
+    bottom: 0; /* Colocado al fondo de la tarjeta */
+    width: 100%; /* Ocupa todo el ancho de la tarjeta */
+    background-color: rgba(50, 50, 50, 0.8); /* Fondo gris semitransparente */
+    color: white; /* Texto blanco */
+    text-align: center; /* Centra el texto */
+    padding: 10px; /* Espaciado interno para el texto */
+    font-size: 18px; /* Tamaño de la fuente */
+    font-weight: bold; /* Negrita para resaltar */
+    border-radius: 0 0 15px 15px; /* Bordes redondeados en la parte inferior */
 }
 
-.btn-secundario:hover {
-    background-color: #2980b9;
-}
-
-/* SECCIONES GENERALES */
-section {
-    padding: 3rem 1rem;
-    width: 90%;
-    margin: auto;
-}
-
-h2 {
-    font-size: 2rem;
-    margin-bottom: 1.5rem;
+/* Pie de Página */
+.footer {
+    background-color: #333;
+    color: #fff;
     text-align: center;
-    color: #2c3e50;
-}
-
-/* CARDS DE MASCOTAS */
-.cards {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    justify-content: center;
-}
-
-.card {
-    background-color: white;
-    padding: 1.5rem;
-    border-radius: 8px;
-    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
-    width: 280px;
-    text-align: center;
-    transition: transform 0.3s;
-}
-
-.card:hover {
-    transform: translateY(-5px);
-}
-
-.card h3 {
-    font-size: 1.4rem;
-    margin-bottom: 0.5rem;
-}
-
-.card p {
-    font-size: 1rem;
-    margin-bottom: 1rem;
-}
-
-/* LISTADOS */
-ul {
-    list-style-type: disc;
-    padding-left: 2rem;
-    margin-bottom: 1rem;
-}
-
-ul li {
-    margin-bottom: 0.5rem;
-}
-
-/* FOOTER */
-footer {
-    background-color: #2c3e50;
-    color: white;
-    text-align: center;
-    padding: 1rem 0;
-    margin-top: 2rem;
-}
-
-footer ul {
-    list-style: none;
-    display: flex;
-    justify-content: center;
-    gap: 1rem;
-    padding-top: 0.5rem;
-}
-
-footer a {
-    color: white;
-    text-decoration: none;
-    font-size: 0.9rem;
-}
-
-footer a:hover {
-    text-decoration: underline;
-}
-
-/* RESPONSIVE */
-@media (max-width: 768px) {
-    nav ul {
-        flex-direction: column;
-        gap: 0.5rem;
-        margin-top: 1rem;
-    }
-
-    .cards {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .hero h2 {
-        font-size: 2rem;
-    }
-
-    .hero p {
-        font-size: 1rem;
-    }
+    padding: 3px;
 }

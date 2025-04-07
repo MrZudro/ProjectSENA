@@ -1,0 +1,163 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/style-ser-cli.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css">
+    <link href="https://cdn.jsdelivr.net/npm/remixicon/fonts/remixicon.css" rel="stylesheet">
+    <title>Landing Page</title>
+</head>
+<body>
+
+  <!-- header -->
+    <header>
+        <h1 class="logo">Logo</h1>
+        <nav class="naOne">
+            <ul>
+                <li><a href="#">Home</a></li>
+                <li><a href="#">Services</a></li>
+                <li><a href="#">Products</a></li>
+                <li><a href="#">Veterinarians</a></li>
+            </ul>
+        </nav>
+        <div class="liProf">
+            <i class="ri-shopping-cart-line"></i>
+            <i class="ri-heart-line"></i>
+            <i class="ri-user-line"></i>
+            <div class="search-bar">
+                <i class="ri-search-line"></i>
+                <input type="text" placeholder="Buscar...">
+            </div>
+        </div>
+    </header>
+
+    <!-- banner -->
+    <section class="banner">
+        <div class="banner-content">
+            <h1>Cuidado para tu mascota</h1>
+            <p>Los mejores servicios para el bienestar de tu mascota.</p>
+            <button class="agendar">Agendar Cita</button>
+        </div>
+    </section>
+
+    <!-- tarjetas -->
+    <section class="cards">
+        <div class="card-container">
+            <div class="card-title">Guardería</div>
+            <div class="card" onclick="this.classList.toggle('flip')">
+                <div class="card-face front"></div>
+                <div class="card-face back">
+                    <p>Cuidado diurno y entretenimiento.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-title">Transporte</div>
+            <div class="card" onclick="this.classList.toggle('flip')">
+                <div class="card-face front"></div>
+                <div class="card-face back">
+                    <p>Traslado seguro para tu mascota.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-title">Alimentación</div>
+            <div class="card" onclick="this.classList.toggle('flip')">
+                <div class="card-face front"></div>
+                <div class="card-face back">
+                    <p>Nutrición especializada.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-title">Accesorios</div>
+            <div class="card" onclick="this.classList.toggle('flip')">
+                <div class="card-face front"></div>
+                <div class="card-face back">
+                    <p>Venta de juguetes y ropa.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-title">Emergencias</div>
+            <div class="card" onclick="this.classList.toggle('flip')">
+                <div class="card-face front"></div>
+                <div class="card-face back">
+                    <p>Atención 24/7 para urgencias.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-title">Baños</div>
+            <div class="card" onclick="this.classList.toggle('flip')">
+                <div class="card-face front"></div>
+                <div class="card-face back">
+                    <p>Baños y cuidados de higiene.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-title">Adiestramiento</div>
+            <div class="card" onclick="this.classList.toggle('flip')">
+                <div class="card-face front"></div>
+                <div class="card-face back">
+                    <p>Entrenamiento especializado.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="card-container">
+            <div class="card-title">Veterinario</div>
+            <div class="card" onclick="this.classList.toggle('flip')">
+                <div class="card-face front"></div>
+                <div class="card-face back">
+                    <p>Consulta y atención médica.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+<!-- footer -->
+<footer class="footer">
+    <div class="footer-contenedor">
+        <div class="footer-logo">
+            <h2>LOGO</h2>
+            <p>Cuidamos a tu mascota con amor y dedicación.</p>
+        </div>
+  
+        <div class="footer-enlaces">
+            <h3>Enlaces Rápidos</h3>
+            <ul>
+                <li><a href="#">Inicio</a></li>
+                <li><a href="#">Servicios</a></li>
+                <li><a href="#">Nosotros</a></li>
+                <li><a href="#">Contacto</a></li>
+            </ul>
+        </div>
+  
+        <div class="footer-contacto">
+            <h3>Contacto</h3>
+            <p><i class="bi bi-telephone"></i> +57 123 456 7890</p>
+            <p><i class="bi bi-envelope"></i> contacto@petcare.com</p>
+            <p><i class="bi bi-geo-alt"></i> Bogotá, Colombia</p>
+        </div>
+  
+        <div class="footer-redes">
+            <h3>Síguenos</h3>
+            <a href="#"><i class="bi bi-facebook"></i></a>
+            <a href="#"><i class="bi bi-instagram"></i></a>
+            <a href="#"><i class="bi bi-whatsapp"></i></a>
+        </div>
+    </div>
+  
+  </footer>
+
+</body>
+</html>

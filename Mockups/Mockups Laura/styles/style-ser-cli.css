@@ -1,0 +1,331 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900&display=swap');
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+    font-family: 'Noto Sans';
+}
+
+body {
+    background-color: #fff4ec;
+}
+
+/* header */
+header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+    background-color: white;
+    padding: 10px 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.logo {
+    width: 20%;
+    letter-spacing: -3px;
+    text-align: center;
+    cursor: pointer;
+    font-size: 2.5em;
+}
+
+.logo:hover {
+    color: #13f299;
+    transition: 1.5s;
+}
+
+.naOne {
+    width: 50%;
+}
+
+.naOne ul {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.naOne ul li {
+    list-style: none;
+}
+
+.naOne ul li a {
+    text-decoration: none;
+    color: black;
+    font-size: 1em;
+    padding: 5px;
+}
+
+.naOne ul li a:hover {
+    color: #13f299;
+    text-decoration: underline;
+    transition: 1s;
+}
+
+.liProf {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: 30%;
+    justify-content: flex-end;
+}
+
+.liProf i {
+    font-size: 1.5em;
+    cursor: pointer;
+    color: black;
+}
+
+.liProf i:hover {
+    color: #09b28e;
+    transition: 0.5s;
+}
+
+.search-bar {
+    position: relative;
+}
+
+.search-bar i {
+    position: absolute;
+    top: 50%;
+    left: 12px;
+    transform: translateY(-50%);
+    color: #999;
+    font-size: 1.2em;
+    pointer-events: none;
+}
+
+.search-bar input[type="text"] {
+    padding: 7px 10px 7px 35px;
+    border: 1px solid #ccc;
+    border-radius: 20px;
+    outline: none;
+    font-size: 1em;
+    width: 220px;
+}
+
+.search-bar input[type="text"]:focus {
+    border-color: #09b28e;
+}
+
+/* banner */
+.banner {
+    background-image: url('/images/img.jpg');
+    background-size: cover;
+    background-position: center;
+    padding: 15%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    margin: 0px auto;
+}
+
+.banner::before {
+    content: "";
+    position: absolute;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.banner-content {
+    color: white;
+    text-align: center;
+    z-index: 1;
+    padding: 20px;
+}
+
+.banner-content h2 {
+    font-size: 2.5em;
+    margin-bottom: 10px;
+}
+
+.banner-content p {
+    font-size: 1.2em;
+    margin-bottom: 20px;
+}
+
+.agendar {
+    background-color: #13f299;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1em;
+    border-radius: 25px;
+    cursor: pointer;
+    color: white;
+    transition: background-color 0.3s ease;
+}
+
+.agendar:hover {
+    background-color: #0cc286;
+}
+
+/* tarjetas */
+.cards {
+
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.card-container {
+    text-align: center;
+}
+
+.card-title {
+    margin-top: 50px;
+    font-size: 1.2em;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.card {
+    width: 100%;
+    height: 250px;
+    position: relative;
+    transform-style: preserve-3d;
+    transition: transform 0.6s, scale 0.3s;
+    cursor: pointer;
+}
+
+.card:hover {
+    scale: 1.05;
+}
+
+.card.flip {
+    transform: rotateY(180deg);
+}
+
+.card-face {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-size: cover;
+    background-position: center;
+    border-radius: 10px;
+}
+
+ 
+
+.front {
+    background-image: url('/images/img.jpg');
+}
+
+.back {
+    background-image: url('/images/img.jpg');
+    background-color: rgba(0, 0, 0, 0.6); 
+    transform: rotateY(180deg);
+    
+}
+
+.card-face p {
+    background-color: rgba(50, 50, 50, 0.8);
+    color: white;
+    text-align: center;
+    padding: 10px; 
+    font-size: 18px;
+    font-weight: bold;
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+    box-sizing: border-box; 
+
+}
+
+/* footer */
+.footer {
+    background: white;
+    color: black;
+    padding: 40px 20px;
+    font-family: 'Poppins', sans-serif;
+}
+
+.footer-contenedor {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 20px;
+    text-align: center;
+}
+
+.footer-logo h2 {
+    font-size: 2em;
+    color: #09b28e;
+}
+
+.footer-logo p {
+    font-size: 1em;
+    color: black;
+    max-width: 250px;
+}
+
+.footer-enlaces h3,
+.footer-contacto h3,
+.footer-redes h3 {
+    font-size: 1.3em;
+    margin-bottom: 10px;
+    color: #09b28e;
+}
+
+.footer-enlaces ul {
+    list-style: none;
+    padding: 0;
+}
+
+.footer-enlaces ul li {
+    margin: 8px 0;
+}
+
+.footer-enlaces ul li a {
+    color: black;
+    text-decoration: none;
+    transition: color 0.3s ease-in-out;
+}
+
+.footer-enlaces ul li a:hover {
+    color: #09b28e;
+}
+
+.footer-contacto p {
+    font-size: 1em;
+    margin: 5px 0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-contacto i {
+ 
+    font-size: 1.2em;
+    margin-right: 8px;
+    color: #09b28e;
+}
+
+.footer-redes a {
+    font-size: 1.5em;
+    color: black;
+    margin: 0 10px;
+    transition: transform 0.3s ease-in-out, color 0.3s ease-in-out;
+}
+
+.footer-redes a:hover {
+    transform: scale(1.2);
+    color: #09b28e;
+}
